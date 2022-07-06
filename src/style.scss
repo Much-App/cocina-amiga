@@ -99,10 +99,43 @@
    display: flex;
    flex-flow: row nowrap;
    height: 500px;
-   width: 750px;
-
-   background-color: white;
+   width: auto;
+   gap: 30px;
    justify-self: center;
+   align-items: center;
+   &>.intro{
+      display: flex;
+      flex-flow: column nowrap;
+      position: relative;
+      top: 60px;
+      width: 600px;
+      height: 290px;
+      background-color: rgba(white, 0.7); 
+      padding: 50px;
+      border-radius: 35%;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      &>h1 {
+         font-size: 32px;
+         font-style: italic;
+         font-weight: 700;
+         font-family: var(--merriweather);
+      }
+      &>p {
+         font-size: 28px;
+         font-family: var(--roboto);
+         line-height: 30px;
+      }
+
+   }
+   &>div>img {
+      height: 280px; 
+      width: auto;
+      border-radius: 40%;
+      box-shadow: 8px 8px 8px rgba(var(--rhubard-red));
+
+   }
 }
 
 
