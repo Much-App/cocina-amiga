@@ -95,7 +95,7 @@
             
       }
 }
-#home-intro {
+#home-tab {
    display: flex;
    flex-flow: row nowrap;
    height: 500px;
@@ -137,6 +137,96 @@
 
    }
 }
+#menu-tab{
+   display: grid;
+   grid-template-rows: repeat(auto-fit,300px);
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   gap: 50px;
+   margin: 5vh 10vw;
+   justify-content: start;
+   &>div{
+      background-color: red;
+      width: 1fr;
+      height: 300px;
+      margin: 0;
+   }
+}
+#contact-tab{
+   display: grid ;   
+   grid-template-rows: 180px 200px 200px;
+   grid-template-columns: 1fr 1fr;
+   grid-template-areas: "message message" "boletin feedback" "menus feedback";
+   column-gap: 25px;
+   margin: 0 10vw;
+   background: radial-gradient(circle, rgba(255,255,255,.8) 0%, rgba(200,200,200,.9) 100%);
+   padding: 25px;
+   border-radius: 50px;
+   &>div{
+      justify-content: center;
+      align-items: center;
+   }
+   &>#contact-msg {
+      display: flex;
+      grid-area: message;
+      border-radius: 40%;
+      line-height: 180px;
+      width: 55vw;
+      justify-self: center;
+      justify-content: center;
+      &>h1{
+         width: 50vw;
+         display: inline-block;
+         vertical-align: middle;
+         line-height: normal;
+         text-align: center;
+         font-size: 28px;
+         font-weight: 700;
+         font-family: var(--merriweather);
+         letter-spacing: 1px;
+      }
+   }
+   &>#email-list {
+      display: flex;
+      flex-flow: column nowrap;
+      grid-area: boletin;
+      background-color: rgba(var(--rhubard-red),0.4);
+      border-radius: 30%;
+      align-items: center;
+      justify-content: center;
+      gap:10px;
+      &>p{
+         display: inline-block;
+         vertical-align: middle;
+         line-height: normal;
+         text-align: justify;
+         font-size: 22px;
+         font-weight: 600; 
+         font-family: var(--roboto);
+         letter-spacing: 1px;
+         text-shadow: 1px 1px 1px white;
+      }
+      &>input {
+
+         min-width: 150px;
+         width: 28vw;
+         max-width: 300px;
+         height: 20px;
+         font-size: 18px;
+
+      }
+   }
+   &>#download-menu{
+      grid-area: menus;
+      background-color: green;
+   }
+   &>#feedback {
+      grid-area: feedback;
+      background-color: orange;
+   }
+}
+
+
+
 
 
 /* CSS RESET */
