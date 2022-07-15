@@ -9,7 +9,12 @@ module.exports = {
    },
    mode: "development",
    module: {
-      rules: [{
+      rules: [
+        {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        use: [{loader: "file-loader?name=/[name].[ext]"}]
+      },
+        {
         test: /\.s[ac]ss$/i,
         use: [
           "style-loader",

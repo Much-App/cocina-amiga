@@ -1,7 +1,7 @@
 
 
 function loadPage(){
-   const container = document.querySelector('#content');
+   const content = document.querySelector('#content');
 
    const tabs = document.createElement('div');
    tabs.setAttribute('id','tabs');
@@ -32,9 +32,18 @@ function loadPage(){
    headerimg.setAttribute('alt','Cocina amiga logo');
    header.appendChild(headerimg);
    
-   container.appendChild(tabs);
-   container.appendChild(header);
+   content.appendChild(tabs);
+   content.appendChild(header);
 
 }
+function reset(){
+   console.log('reset')
+   const content = document.querySelector('#content');
+   while (content.childElementCount > 2){
+      console.log(content.childElementCount)
+      content.removeChild(content.lastChild);
+   
+   }
+}
 
-export default loadPage;
+export {loadPage , reset};
