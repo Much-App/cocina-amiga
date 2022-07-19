@@ -1,6 +1,0 @@
-
-List of html id names
---content /whole body/
---tabs /fixed top-left buttons for navigation/
-   --home, menu, contact /#tabs navigation buttons for each page/
---header /fixed header for each page/
