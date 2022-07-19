@@ -1,6 +1,7 @@
 
 
 function loadPage(){
+   
    const content = document.querySelector('#content');
 
    const tabs = document.createElement('div');
