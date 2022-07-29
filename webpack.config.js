@@ -10,9 +10,17 @@ module.exports = {
    mode: "development",
    module: {
       rules: [
-        {
-        test: /\.(jpe?g|png|gif|svg)$/i,
-        use: [{loader: "file-loader?name=/[name].[ext]"}]
+        
+      {
+        test: /\.(svg|png|jpe?g|gif)$/i,
+        use: {
+          loader: "file-loader",
+          options: {
+            esModule: false,
+            name: "[name].[hash].[ext]",
+            outputPath: "imgs"
+          }
+        }
       },
         {
         test: /\.s[ac]ss$/i,
@@ -29,7 +37,7 @@ module.exports = {
               loader: 'file-loader',
               options: {
                 name: '[name].[ext]',
-                outputPath: 'fonts/'
+                outputPath: 'fonts'
               }
             }
           ]

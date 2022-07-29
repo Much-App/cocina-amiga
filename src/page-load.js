@@ -1,4 +1,4 @@
-
+import headerImg from "./imgs/logo1nb.png";
 
 function loadPage(){
    
@@ -29,7 +29,7 @@ function loadPage(){
    header.setAttribute('id','header');
 
    const headerimg = document.createElement('img');
-   headerimg.setAttribute('src','../src/logo1nb.png');
+   headerimg.setAttribute('src',headerImg);
    headerimg.setAttribute('alt','Cocina amiga logo');
    header.appendChild(headerimg);
    
@@ -38,10 +38,8 @@ function loadPage(){
 
 }
 function reset(){
-   console.log('reset')
    const content = document.querySelector('#content');
    while (content.childElementCount > 2){
-      console.log(content.childElementCount)
       content.removeChild(content.lastChild);
    
    }

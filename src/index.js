@@ -1,8 +1,8 @@
-import './style.scss';
+import './styles/style.scss';
 import {loadPage , reset} from './page-load.js';
-import makeHome from './home';
-import makeMenu from './menu.js';
-import makeContact from './contact';  
+import makeHome from './pages/home';
+import makeMenu from './pages/menu';
+import makeContact from './pages/contact';  
 
 loadPage();
 makeHome();
